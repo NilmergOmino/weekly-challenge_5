@@ -15,12 +15,19 @@
     <header class="header" id="home">
         <nav class="nav">
             <a href="" class="logo-link"><span class="span_bold">Macan</span>kumbang</a>
+            <button class="toggle-menu">
+                <span class="toggle__span-container">
+                    <span class="toggle__span"></span>
+                    <span class="toggle__span"></span>
+                    <span class="toggle__span"></span>
+                </span>
+            </button>
             <ul class="nav__list">
-                <li><a href="#home" class="nav__link">Home</a></li>
-                <li><a href="#services" class="nav__link">Services</a></li>
-                <li><a href="#work" class="nav__link">Work</a></li>
-                <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
-                <li><a href="#contact" class="nav__link">Contact</a></li>
+                <li><a href="#home" class="nav__link scroll-link">Home</a></li>
+                <li><a href="#services" class="nav__link scroll-link">Services</a></li>
+                <li><a href="#work" class="nav__link scroll-link">Work</a></li>
+                <li><a href="#testimonials" class="nav__link scroll-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav__link scroll-link">Contact</a></li>
             </ul>
         </nav>
         <div class="header__content">
@@ -221,13 +228,15 @@
                     </div>
             </section>
         </article>
-        <a href="#home" class="link-up">
-            <img src="img/shape_up.png" alt="go up" class="link-image">
-        </a>
     </main>
     <footer class="footer">
+        <a href="#home" class="link-up scroll-link">
+            <img src="img/shape_up.png" alt="go up" class="link-image">
+        </a>
         <p class="paragraph paragraph_copyright">(c)copyright 2013 macunkumbang</p>
         <p class="paragraph"><span class="span_bold">Macank</span>umbang</p>
     </footer>
+
+    <script src="js/smooth-scroll.js"></script>
 </body>
 </html>
