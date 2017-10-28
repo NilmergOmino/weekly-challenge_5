@@ -4,39 +4,40 @@
 //  percentStart = 0; --> początkowa zmiana, im ta zmienna jest większa, tym większy jest pierwszy przeskok, niska wartość daje łagodniejszy start
 
 window.addEventListener('DOMContentLoaded', function(){
+    var target, upto, speed, percentStart, step;
+    var running = false;
     var navElements = document.getElementsByClassName("scroll-link"),
         navElementsAmount = navElements.length;
-        // speed = 2.5,
-        // percentStart = 0;
     for(var i=0;i< navElementsAmount; i++){
         var navElement = navElements[i];
         navElement.addEventListener('click', function(event){
             var clickedElement = event.target.className == "link-image" ? event.target.parentNode : event.target,
-                target = document.getElementById(clickedElement.hash.slice(1));
-                upto = target.offsetTop;
-                pageHeight = document.documentElement.scrollHeight;
+                pageHeight = document.documentElement.scrollHeight,
                 viewHeight = document.documentElement.clientHeight;
-                speed = 2.5;
-                percentStart = 0;
+            target = document.getElementById(clickedElement.hash.slice(1));
+            upto = target.offsetTop;
+            speed = 2.5;
+            percentStart = 0;
             if(upto + viewHeight >= pageHeight) upto = pageHeight - viewHeight;
             history.pushState(null,null,clickedElement.hash);
-            var scroll = function(){
-                var from = pageYOffset,
-                    step = Math.round((upto - from)*percentStart/1000),
-                    step = Math.abs(step);
-                percentStart += speed;
-                if (step < 1) step = 1;
-                if (from < upto) {
-                    window.scrollBy(0, step);
-                    window.requestAnimationFrame(scroll);
-                }
-                else if(from > upto) {
-                    window.scrollBy(0, -step);
-                    window.requestAnimationFrame(scroll);
-                }
-            }
-            window.requestAnimationFrame(scroll);
+            if (!running) scroll();
             event.preventDefault();
         }, false)
+    }
+    var scroll = function(){
+        running = true;
+        var from = pageYOffset,
+            step = Math.abs(Math.floor((upto - from)*percentStart/1000));
+        percentStart += speed;
+        if (step < 1) step = 1;
+        if (from < upto) {
+            window.scrollBy(0, step);
+            window.requestAnimationFrame(scroll);
+        }
+        else if(from > upto) {
+            window.scrollBy(0, -step);
+            window.requestAnimationFrame(scroll);
+        }
+        else running = false;
     }
 })

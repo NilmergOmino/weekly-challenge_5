@@ -13,16 +13,16 @@
 </head>
 <body>
     <header class="header" id="home">
-        <nav class="nav">
+        <nav class="nav" id="nav">
             <a href="" class="logo-link"><span class="span_bold">Macan</span>kumbang</a>
-            <button class="toggle-menu">
+            <button class="toggle-menu" id="toggle-menu">
                 <span class="toggle__span-container">
                     <span class="toggle__span"></span>
                     <span class="toggle__span"></span>
                     <span class="toggle__span"></span>
                 </span>
             </button>
-            <ul class="nav__list">
+            <ul class="nav__list" id="menu">
                 <li><a href="#home" class="nav__link scroll-link">Home</a></li>
                 <li><a href="#services" class="nav__link scroll-link">Services</a></li>
                 <li><a href="#work" class="nav__link scroll-link">Work</a></li>
@@ -152,32 +152,32 @@
             </header>
             <div class="cite-block">
                 <figure class="person-cloud">
-                    <img src="" alt="John Doe">
+                    <img src="" alt="Fox Mulder">
                 </figure>
                 <blockquote class="blockquote">
-                    <p class="paragraph">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
-                    <footer class="blockquote__footer">John Doe</footer>
+                    <p class="paragraph">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
+                    <footer class="blockquote__footer">Fox Mulder</footer>
                 </blockquote>
             </div>
-            <div class="cite-block cite-block_hidden">
+            <div class="cite-block">
                 <figure class="person-cloud">
-                    <img src="" alt="John Doe">
+                    <img src="" alt="Lord Voldemort">
                 </figure>
                 <blockquote class="blockquote">
-                    <p class="paragraph">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
-                    <footer class="blockquote__footer">John Doe</footer>
+                    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, atque! Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
+                    <footer class="blockquote__footer">Lord Voldemort</footer>
                 </blockquote>
             </div>
-            <div class="cite-block cite-block_hidden">
+            <div class="cite-block">
                 <figure class="person-cloud">
-                    <img src="" alt="John Doe">
+                    <img src="" alt="Jack Black">
                 </figure>
                 <blockquote class="blockquote">
-                    <p class="paragraph">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
-                    <footer class="blockquote__footer">John Doe</footer>
+                    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, laboriosam eaque nihil consequuntur ad quam! lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
+                    <footer class="blockquote__footer">Jack Black</footer>
                 </blockquote>
             </div>
-            <div class="cite-block cite-block_hidden">
+            <div class="cite-block cite-block_active">
                 <figure class="person-cloud">
                     <img src="" alt="John Doe">
                 </figure>
@@ -187,10 +187,10 @@
                 </blockquote>
             </div>
             <div class="buttons-container">
-                <button class="button-cite">1</button>
-                <button class="button-cite">2</button>
-                <button class="button-cite">3</button>
-                <button class="button-cite" aria-pressed="true">4</button>
+                <button class="button-cite" aria-pressed="false" aria-expanded="false">1</button>
+                <button class="button-cite" aria-pressed="false" aria-expanded="false">2</button>
+                <button class="button-cite" aria-pressed="false" aria-expanded="false">3</button>
+                <button class="button-cite" aria-pressed="true" aria-expanded="true">4</button>
             </div>
         </article>
         <article class="article article-contact" id="contact">
@@ -238,5 +238,8 @@
     </footer>
 
     <script src="js/smooth-scroll.js"></script>
+    <script src="js/sticky-nav.js"></script>
+    <script src="js/toggle-menu.js"></script>
+    <script src="js/toggle-cite-block.js"></script>
 </body>
 </html>

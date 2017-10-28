@@ -48,14 +48,14 @@
         display: block;
     }
     .nav__list{
-        display: none;
+        transform: translateX(100%);
         position: fixed;
         width: 50%;
         right: 0;
         top: 80px;
         height: 100%;
         background-color: rgb(13, 11, 17);
-        justify-content: center;
+        justify-content: flex-start;
         flex-direction: column;
         transition: 0.5s;
         font-size: 18px;
@@ -64,7 +64,8 @@
         }
     }
     .nav__list_active{
-        display: block;
+        transition: 0.5s;
+        transform: translateX(0);
     }
     .nav_sticky{
         height: 50px;
