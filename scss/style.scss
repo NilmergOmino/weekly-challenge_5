@@ -3,6 +3,15 @@ body{
     font-family: 'Open Sans', sans-serif;
     background-color: rgb(71, 90, 133);
 }
+.fade-in_done{
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s;
+}
+.fade-in{
+    transform: translateY(50px);
+    opacity: 0;
+}
 .header{
     display: flex;
     align-items: center;
@@ -336,10 +345,10 @@ body{
         .bg-image_4, .bg-image_5{
             background-image: url("../img/portfolio/cyber-security-min.jpg");
         }
-        &:hover .figcaption{
+        &:hover .figcaption, &:focus .figcaption{
             opacity: 1;
         }
-        &:hover .bg-image{
+        &:hover .bg-image, &:focus .bg-image{
             background-size: auto 120%;
         }
         .portfolio-item__heading{

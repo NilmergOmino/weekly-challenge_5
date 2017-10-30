@@ -15,7 +15,6 @@ window.addEventListener('DOMContentLoaded', function(){
         var numb = document.querySelectorAll('.button-cite[aria-pressed="true"]')[0].innerHTML-1;
         numb++;
         numb = numb>3 ? 0 : numb;
-        console.log(timecheck);
         if(timecheck == false) {
             toggleButton(buttonCite[numb]);
         }

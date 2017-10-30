@@ -20,6 +20,14 @@
         padding: 70px 15% 80px 15%;
     }
 }
+@media (min-width: 1500px){
+    .header{
+        .header__image-container{
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+    }
+}
 @media (max-width: 1300px){
     .section-contact-info .form-container{
         .input{
@@ -33,7 +41,6 @@
             margin-top: 0;
         }
     }
-
 }
 @media (max-width: 1200px){
     .article-services{
